@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\URL;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +25,6 @@ Auth::routes();
 
 
 Route::get('/{any}','Homecontroller@index')->where(['any'=>'.*' ]);
+
+
+URL::forceScheme('https');

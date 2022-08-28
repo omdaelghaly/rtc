@@ -21,7 +21,7 @@
    var uid='{{Auth::user()->id}}';
    var user="{{Auth::user()}}";
   
-   var socket=io('http://localhost:5000',{query:'name='+uname+'&id='+uid});
+   var socket=io('https://school-egy.herokuapp.com/',{query:'name='+uname+'&id='+uid});
  
 
    </script>
