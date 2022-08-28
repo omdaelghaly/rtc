@@ -1,0 +1,35 @@
+
+- install laravel 7
+- install laravel-mongodb backage =>  composer require jenssegers/mongodb:4.0.0-alpha.1 
+* if laravel 8 => composer require jenssegers/mongodb:^3.8 --ignore-platform-reqs
+
+- ADD config/app.php:
+Jenssegers\Mongodb\MongodbServiceProvider::class,
+
+
+- ADD config/database.php:
+
+      /////////////////////////////////////
+      'mongodb' => [
+        'driver' => 'mongodb',
+        'dsn' => env('DB_DSN','mongodb+srv://emadnour:mangodb@cluster0.fn4lqim.mongodb.net/?retryWrites=true&w=majority'),
+        'database' => env('DB_DATABASE', 'DB_DATABASE'),
+    ],
+        ///////////////////////////
+
+        at the top of the file ADD:
+         'default' => env('DB_CONNECTION', 'mongodb'),
+
+- at models ADD:
+use Illuminate\Database\Eloquent\Model;
+ 
+ 
+ 
+class Student extends Model
+{
+ protected $connection = 'mongodb';
+ protected $collection = 'students';
+    protected $fillable = [
+        'first_name','last_name', 'address'
+    ];
+}
