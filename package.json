@@ -1,4 +1,8 @@
 {
+      "engines": {
+    "npm": "6.14.16"
+      },
+
     "private": true,
     "scripts": {
         "dev": "npm run development",

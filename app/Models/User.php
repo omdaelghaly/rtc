@@ -13,7 +13,7 @@ use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 use Jenssegers\Mongodb\Auth\User as Authenticatable;
 
 
-class User extends  Authenticatable
+class User extends Eloquent implements Authenticatable
 {
     use  Notifiable, HasApiTokens ;
 
