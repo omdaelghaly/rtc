@@ -25,7 +25,7 @@
 
             
       <li class="nav-item dropdown">
-        <router-link  class="nav-link btn btn-primary btn-sm" to="/"><h5 style="color:white"> my profile   </h5></router-link> 
+        <router-link  class="nav-link btn btn-primary btn-sm" to="/profile"><h5 style="color:white"> my profile   </h5></router-link> 
       </li>
      
      <!-- {{this.$store.getters.user}} -->
