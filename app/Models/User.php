@@ -10,12 +10,19 @@ use Laravel\Sanctum\HasApiTokens;
 use Jenssegers\Mongodb\Eloquent\Model as Eloquent;
 // use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-use Jenssegers\Mongodb\Auth\User as Authenticatable;
-
-
-class User extends Eloquent implements Authenticatable
+use Illuminate\Auth\Authenticatable;
+use Illuminate\Auth\Passwords\CanResetPassword;
+use Illuminate\Foundation\Auth\Access\Authorizable;
+use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
+use Illuminate\Contracts\Auth\Access\Authorizable as AuthorizableContract;
+use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+class User extends \Jenssegers\Mongodb\Eloquent\Model implements
+AuthenticatableContract,
+AuthorizableContract,
+CanResetPasswordContract
 {
-    use  Notifiable, HasApiTokens ;
+    use Authenticatable, Authorizable, CanResetPassword, Notifiable;
+
 
     protected $connection = 'mongodb';
     protected $collection = 'users';
