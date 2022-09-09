@@ -32,7 +32,7 @@ class Roomcontroller extends Controller
          $user = User::where("_id", $request->id)->first();
        if ($user)
        {
-        $user->tokens()->delete();
+       // $user->tokens()->delete();
            return $user->createToken($request->device_name)->plainTextToken;
         }else{
                  return response()->json(['data'=>'errors']);
