@@ -22,12 +22,17 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+Route::group(['middleware' => ['auth:sanctum']], function () {
 
-//HOME ROOm
 Route::post('authuser',[Roomcontroller::class,'authuser']);
 Route::post('getuserinfo',[Roomcontroller::class,'getuserinfo']);
 Route::get('getrooms',[Roomcontroller::class,'getrooms']);
     
+
+
+}
+//HOME ROOm
+
 
 
 URL::forceScheme('https');
