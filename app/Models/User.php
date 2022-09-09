@@ -21,7 +21,7 @@ AuthenticatableContract,
 AuthorizableContract,
 CanResetPasswordContract
 {
-    use Authenticatable, Authorizable, CanResetPassword, Notifiable, HasApiTokens; 
+    use Authenticatable, Authorizable, CanResetPassword, Notifiable;
 
 
     protected $connection = 'mongodb';
