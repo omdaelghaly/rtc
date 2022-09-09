@@ -57,12 +57,12 @@ export default {
       
        },
        beforeCreate(){
-         if(this.$store.getters.user.getroom.name==null){
-           this.$router.push('/')
-         }
+         // if(this.$store.getters.user.getroom.name==null){
+         //   this.$router.push('/')
+         // }
        }
           
  
-}
+};
 </script>
 

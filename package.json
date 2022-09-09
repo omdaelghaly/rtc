@@ -1,8 +1,7 @@
 {
-      "engines": {
-    "npm": "6.14.16"
-      },
-
+    "engines": {
+        "npm": "6.14.16"
+    },
     "private": true,
     "scripts": {
         "dev": "npm run development",
@@ -14,15 +13,13 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js",
         "start": "node server.js"
     },
-    "devDependencies": {
-
-    },
+    "devDependencies": {},
     "dependencies": {
         "emojionearea": "^3.0.0",
         "socket.io": "^4.5.1",
         "vue-router": "^3.5.3",
         "vuex": "^3.3.0",
-                "axios": "^0.19",
+        "axios": "^0.19",
         "bootstrap": "^4.0.0",
         "cross-env": "^7.0",
         "jquery": "^3.2",
