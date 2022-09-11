@@ -24,7 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['middleware' => ['auth:sanctum']], function () {
 
-Route::post('authuser',[Roomcontroller::class,'authuser']);
+Route::post('authuser',[Roomcontroller::class,'authuser'])->name('authuser);
 Route::post('getuserinfo',[Roomcontroller::class,'getuserinfo']);
 Route::get('getrooms',[Roomcontroller::class,'getrooms']);
     
